@@ -1,0 +1,127 @@
+/*
+ * Hoja de Estilos Personalizada para el Portal de APIs
+ * Autor: Estarlin De La Cruz
+ * Descripción: Esta hoja de estilos personaliza la apariencia del portal de APIs,
+ * Fecha: 27 de junio de 2025
+*/
+
+/* --- Fuentes Externas --- */
+/* Importamos la fuente estilo "pixel" para la temática de Pokémon */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+/* --- Estilos Generales y Mejoras Visuales --- */
+
+html {
+    /* Permite un desplazamiento suave al hacer clic en anclas (como el botón "Ver APIs") */
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Un color de fondo sutil para que no sea blanco puro */
+    background-color: #f4f7f6;
+}
+
+/* Efecto de animación para todas las tarjetas (cards) */
+.card {
+    /* Transición suave para la transformación y la sombra */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    /* Eleva la tarjeta ligeramente al pasar el cursor sobre ella */
+    transform: translateY(-5px);
+    /* Añade una sombra más pronunciada para dar profundidad */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* --- 1. Estilos para API de Género --- */
+.alert-pink {
+    color: #6d1d41;
+    background-color: #fce4ec;
+    border-color: #f8bbd0;
+}
+
+
+/* --- 4. Estilos para API de Clima --- */
+/* Tarjeta para clima soleado */
+.weather-card.sunny {
+    background: linear-gradient(to top, #ffb74d, #ffd54f);
+    color: #333;
+}
+
+/* Tarjeta para clima nublado */
+.weather-card.clouds {
+    background: linear-gradient(to top, #90a4ae, #cfd8dc);
+    color: #263238;
+}
+
+/* Tarjeta para clima lluvioso */
+.weather-card.rain {
+    background: linear-gradient(to top, #42a5f5, #78909c);
+    color: white; /* Texto blanco para mejor contraste */
+}
+
+/* Tarjeta por defecto (aunque Bootstrap ya la maneja, es bueno tenerla) */
+.weather-card.default {
+    background-color: #f8f9fa;
+}
+
+
+/* --- 5. Estilos para API de Pokémon --- */
+.pokemon-card {
+    border: 5px solid #FFCB05; /* Borde amarillo Pokémon */
+    background-color: #F0F8FF; /* Fondo azul claro */
+    border-radius: 15px; /* Bordes más redondeados */
+}
+
+.pokemon-card .card-header {
+    background-color: #2a75bb; /* Azul clásico de Pokémon */
+    color: #FFCB05; /* Letras amarillas */
+    font-family: 'Press Start 2P', cursive; /* Fuente pixelada importada */
+    text-shadow: 2px 2px #3B4CCA; /* Sombra para dar efecto 3D al texto */
+    -webkit-text-stroke: 1px #3B4CCA; /* Borde del texto para un look de videojuego */
+    font-size: 1.2rem;
+    border-bottom: 5px solid #FFCB05;
+}
+
+/* Estilo para las píldoras de habilidades del Pokémon */
+.pokemon-abilities li {
+    background-color: #e0e0e0;
+    border-radius: 20px; /* Píldoras redondeadas */
+    padding: 5px 15px;
+    margin: 5px 5px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* --- 6. Estilos para API de Noticias --- */
+/* Asegura que todas las tarjetas de noticias tengan la misma altura en una fila */
+.news-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.news-card .card-body {
+    flex-grow: 1; /* Permite que el cuerpo de la tarjeta crezca */
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card .btn {
+    margin-top: auto; /* Empuja el botón "Leer más" al final de la tarjeta */
+}
+
+
+/* --- 10. Estilos para API de Chistes --- */
+.joke-card {
+    background-color: #fffde7; /* Un amarillo pálido y alegre */
+    border: 2px dashed #fbc02d; /* Borde punteado para un look divertido */
+}
+
+/* Puedes agregar más estilos aquí si lo necesitas */
